@@ -1,0 +1,26 @@
+* Current installation
+  Created BSD label on slice/parittion:
+  - =ada2s1=
+  - =ada2s2=
+  - =ada2s3=
+
+  Create file system on slice/partition:
+  - =ada2s1a=
+  - =ada2s3a=
+
+  Installing system files on device =ada2s1a=.
+** To use the DATA partition
+   1. Add the disk =ada2= on the =Disks|Management= page.
+   2. Add the mount point on the =Disks|Mount Point|Management= page.
+      Use the following parameters
+      - Disk =ada2=
+      - Partition 3
+      - Partition type MBR
+      - Filesystem UFS
+
+   Do NOT format the drive =ada2=! The DATA partition has already been formated for you.
+** To use the SWAP partition
+   1. Enable swap space usage on the =System|Advanced|Swap= page.
+      Use the following parameters:
+      - Type: device
+      - Device: =/dev/ada2s2b=
